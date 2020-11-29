@@ -1,0 +1,350 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* General */
+    --general-line-height: 1.5;
+    --general-font-size: 1rem;
+    --general-heading-spacing: 1.5rem;
+    --general-text-spacing: 1rem;
+
+
+    --container-width: 1200px;
+    --container-padding: 2rem;
+
+    --breakpoint-small: 480px;
+    --breakpoint-medium: 800px;
+    --breakpoint-large: 1100px;
+
+    --default-text-color: #000;
+    --default-font-family: sans-serif;
+    --default-h1-font-size: 3rem;
+    --default-h2-font-size: 2.5rem;
+    --default-h3-font-size: 2rem;
+    --default-h4-font-size: 1.75rem;
+    --default-h5-font-size: 1.5rem;
+    --default-h6-font-size: 1.25rem;
+
+    --default-image-border-radius: 1rem;
+
+    /***********************
+    *
+    *   Buttons
+    *
+    ************************/
+
+    /* Font-size aka button size */
+    --button-default-font-size-small: 0.75rem;
+    --button-default-font-size-default: 1rem;
+    --button-default-font-size-large: 1.25rem;
+
+    /* Font-family */
+    --button-default-font-family: sans-serif;
+    --button-default-font-weight: 400;
+    --button-default-text-transform: uppercase;
+    --button-default-text-decoration: none;
+
+    /* Button general sizing */
+    --button-default-padding: .65em 3em;
+    --button-default-border-width: 0.125em;
+    --button-default-border-style: solid;
+
+    /* Animaton */
+    --button-default-transition: border .15s ease-in-out, background .15s ease-in-out, color .15s ease-in-out;
+
+    /* Border radius */
+    --button-default-border-radius: 2em;
+
+    /* Default Button styling */
+    --button-default-text-color: #fff;
+    --button-default-background-color: #000;
+    --button-default-border-color: #000;
+
+    /* Primary Button styling */
+    --button-primary-text-color: #fff;
+    --button-primary-background-color: green;
+    --button-primary-border-color: green;
+
+    /* Secondary Button styling */
+    --button-secondary-text-color: #fff;
+    --button-secondary-background-color: blue;
+    --button-secondary-border-color: blue;
+
+    /* Tertiary Button styling */
+    --button-tertiary-text-color: #fff;
+    --button-tertiary-background-color: red;
+    --button-tertiary-border-color: red;
+
+
+}
+
+pre {
+    font-size: var(--default-font-size);
+    padding: 1rem;
+    display: block;
+    font-family: monospace;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+    word-wrap: break-word;
+    border-left: 3px solid hotpink;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+html {
+    line-height: var(--general-line-height);
+    font-size: var(--general-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+a {
+    font-family: var(--default-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: var(--general-heading-spacing);
+}
+
+p,
+ul,
+ol,
+li,
+a {
+    margin-bottom: var(--general-text-spacing);
+}
+
+h1 {
+    font-size: var(--default-h1-font-size);
+}
+
+h2 {
+    font-size: var(--default-h2-font-size);
+}
+
+h3 {
+    font-size: var(--default-h3-font-size);
+}
+
+h4 {
+    font-size: var(--default-h4-font-size);
+}
+
+h5 {
+    font-size: var(--default-h5-font-size);
+}
+
+h6 {
+    font-size: var(--default-h6-font-size);
+}
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.o-image {
+    border-radius: var(--default-image-border-radius);
+}
+
+.o-image--circle {
+    border-radius: 50%;
+}
+
+ul,
+ol {
+    padding-left: 1.25rem;
+}
+
+.o-container {
+    max-width: var(--container-width);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--container-padding);
+    padding-left: var(--container-padding);
+}
+
+.o-container--full-width {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.o-row {
+    margin-left: calc(var(--container-padding) * -1);
+    margin-right: calc(var(--container-padding) * -1);
+}
+
+.o-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.o-grid__column {
+    padding-right: var(--container-padding);
+    padding-left: var(--container-padding);
+    flex-grow: 1;
+    width: 100%;
+    flex-basis: 0;
+    /* Skal fjernes / ændres */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Skal fjernes */
+.o-grid__column:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+.c-button {
+    display: inline-flex;
+    text-decoration: var(--button-default-text-decoration);
+    text-transform: var(--button-default-text-transform);
+    font-family: var(--button-default-font-family);
+    font-weight: var(--button-default-font-weight);
+    font-size: var(--button-default-font-size-default);
+    padding: var(--button-default-padding);
+    color: var(--button-default-text-color);
+    border-color: var(--button-default-border-color);
+    background-color: var(--button-default-background-color);
+    border-width: var(--button-default-border-width);
+    border-style: var(--button-default-border-style);
+    border-radius: var(--button-default-border-radius);
+    justify-content: center;
+    align-items: center;
+    transition: var(--button-default-transition);
+}
+
+.c-button:not(:disabled) {
+    cursor: pointer;
+}
+
+
+.c-button:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.c-button--small {
+    font-size: var(--button-default-font-size-small);
+}
+
+.c-button--large {
+    font-size: var(--button-default-font-size-large);
+}
+
+.c-button--block {
+    display: flex;
+}
+
+.c-button--link {
+    background-color: transparent;
+    color: var(--default-text-color);
+    border-color: transparent;
+    transition: var(--button-default-transition);
+}
+
+.c-button--link:hover {
+    text-decoration: underline;
+}
+
+.c-button--inverted {
+    background-color: transparent;
+    color: var(--button-default-background-color);
+    border-color: var(--button-default-border-color);
+}
+
+.c-button--inverted:hover {
+    color: var(--button-default-text-color);
+    background-color: var(--button-default-background-color);
+}
+
+.c-button--primary {
+    color: var(--button-primary-text-color);
+    background-color: var(--button-primary-background-color);
+    border-color: var(--button-primary-background-color);
+}
+
+.c-button--primary.c-button--inverted {
+    color: var(--button-primary-background-color);
+    background-color: transparent;
+    border-color: var(--button-primary-background-color);
+}
+
+.c-button--primary.c-button--inverted:hover {
+    color: var(--button-primary-text-color);
+    background-color: var(--button-primary-background-color);
+}
+
+.c-button--secondary {
+    color: var(--button-secondary-text-color);
+    background-color: var(--button-secondary-background-color);
+    border-color: var(--button-secondary-background-color);
+}
+
+.c-button--secondary.c-button--inverted {
+    color: var(--button-secondary-background-color);
+    background-color: transparent;
+}
+
+
+.c-button--secondary.c-button--inverted:hover {
+    color: var(--button-secondary-text-color);
+    background-color: var(--button-secondary-background-color);
+}
+
+/* Test af REM vs EM vs PX */
+
+.c-button--pixels {
+    padding: 24px 36px;
+    font-size: 24px;
+    background-color: red;
+    border-color: red;
+}
+
+.c-button--pixels-rem {
+    padding: 24px 36px;
+    font-size: 1.5rem;
+    background-color: blue;
+    border-color: blue;
+}
+
+.c-button--rem-em {
+    font-size: 1.5rem;
+    padding: 1em 1.5em;
+    background-color: green;
+    border-color: green;
+}
+
+.c-button--rem {
+    font-size: 1.5rem;
+    padding: 1.5rem 2.25rem;
+    background-color: orange;
+    border-color: orange;
+}
+
+.u-text-center {
+    text-align: center;
+}
