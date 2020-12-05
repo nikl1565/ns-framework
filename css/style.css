@@ -32,6 +32,8 @@
 
     --default-image-border-radius: 1rem;
 
+    --color-white: #fff;
+
     /***********************
     *
     *   Buttons
@@ -74,13 +76,6 @@
     --button-secondary-text-color: #fff;
     --button-secondary-background-color: blue;
     --button-secondary-border-color: blue;
-
-    /* Tertiary Button styling */
-    --button-tertiary-text-color: #fff;
-    --button-tertiary-background-color: red;
-    --button-tertiary-border-color: red;
-
-
 }
 
 pre {
@@ -128,9 +123,13 @@ h6 {
 p,
 ul,
 ol,
-li,
 a {
     margin-bottom: var(--general-text-spacing);
+}
+
+ol ol,
+ul ul {
+    margin-bottom: 0;
 }
 
 h1 {
@@ -315,36 +314,21 @@ ol {
     background-color: var(--button-secondary-background-color);
 }
 
-/* Test af REM vs EM vs PX */
-
-.c-button--pixels {
-    padding: 24px 36px;
-    font-size: 24px;
-    background-color: red;
-    border-color: red;
-}
-
-.c-button--pixels-rem {
-    padding: 24px 36px;
-    font-size: 1.5rem;
-    background-color: blue;
-    border-color: blue;
-}
-
-.c-button--rem-em {
-    font-size: 1.5rem;
-    padding: 1em 1.5em;
-    background-color: green;
-    border-color: green;
-}
-
-.c-button--rem {
-    font-size: 1.5rem;
-    padding: 1.5rem 2.25rem;
-    background-color: orange;
-    border-color: orange;
+.c-button--secondary.c-button--inverted:focus {
+    box-shadow: 0 0 0 5px var(--color-white),
+        0 0 0 10px var(--button-secondary-background-color);
+    background-color: var(--button-secondary-background-color);
+    color: var(--button-secondary-text-color);
 }
 
 .u-text-center {
     text-align: center;
+}
+
+
+/* Skal flyttes over i HTML dokumentation / demo dokumentet som et style tag i stedet */
+
+/* Erstat med eksempelkasser, som har en margin-bottom i stedet */
+.o-grid__column > * {
+    margin-bottom: 1.5rem;
 }
